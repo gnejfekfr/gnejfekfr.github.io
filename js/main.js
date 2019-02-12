@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    /* section1 h2 animate */
+    $('.section1 > h2').animate({opacity:1},400,'swing');
+    
+    
     /* section1 slime animate */
     setInterval(function() {
         $('.pink').animate({
@@ -14,16 +18,47 @@ $(document).ready(function(){
         }, 500);
 
         $('.gold').animate({
-            'bottom': '159px'
-        }, 500).animate({
             'bottom': '150px'
+        }, 500).animate({
+            'bottom': '160px'
         }, 500);
     }, 0);
     
+    
     /* mouse-bt click scroll-effect */
     $('.mouse-bt').click(function(){
-        $('html, body').stop().animate({scrollTop:$('#section2').offset().top},500,'swing');
+        $('html, body').stop().animate({scrollTop:$('.section2').offset().top},500,'swing');
     });
+    
+    
+    /* top-bt */
+    $('.top-bt').click(function(event){
+        $('html, body').stop().animate({scrollTop:0},500,'swing');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){
+        if($(window).scrollTop() < 110){
+            $('.top-bt').removeClass('on');
+        }
+        else{
+            $('.top-bt').addClass('on');
+        }
+        
+        if($(window).scrollTop() > 5490){
+            $('.top-bt').addClass('move');
+        }
+        else{
+            $('.top-bt').removeClass('move');
+        }
+        console.log($('body').height());
+    })
+    
+    
+    /* section3 down click */
+    $('.down').click(function(){
+        $('html, body').stop().animate({scrollTop:$('.section4').offset().top},500,'swing');
+    })
+    
     
     /* slime character slide */
     var swiper = new Swiper('.slime-txt-slide',{
