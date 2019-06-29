@@ -50,7 +50,7 @@ $(document).ready(function(){
         else{
             $('.top-bt').removeClass('move');
         }
-        console.log($('body').height());
+        //console.log($('body').height());
     })
     
     
@@ -75,7 +75,7 @@ $(document).ready(function(){
 
                 var target = $('.txt-slide').eq(index).data('target');
 
-                console.log(target);
+                //console.log(target);
 
                 $('.slime-img').removeClass('active');
                 $('.slime-img#' + target).addClass('active');
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
         var target = $('.txt-slide').eq(index).data('target');
 
-        console.log(target);
+        //console.log(target);
 
         $('.slime-img').removeClass('active');
         $('.slime-img#' + target).addClass('active');
