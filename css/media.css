@@ -11,11 +11,11 @@
     .section1 h2 {
         margin-left: -750px;
     }
+    .character .blue{
+        left: 500px;
+    }
     .character .gold{
         left: 400px;
-    }
-    .character .blue{
-        left: -500px;
     }
     .mouse-bt {
         bottom: 90px;
