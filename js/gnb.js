@@ -16,17 +16,37 @@ $(document).ready(function(){
         var offset = $pages.eq(index).offset().top;
         
         $body.stop().animate({scrollTop : offset}, 500);
-        
-        return false;
     });
     
     $(document).trigger('scroll');
     
-    
     $(document).scroll(function(){
         var index = Math.round($(this).scrollTop() / 768);
-
         $menu.removeClass('active');
         $menu.eq(index).addClass('active');
     });
+    
+    /* change window width */
+    var winWidth = $(window).width();
+    $(window).resize(function(){
+        if(winWidth > 2000){
+            //console.log(winWidth);
+            $(document).scroll(function(){
+                var index = Math.round($(this).scrollTop() / 920);
+                $menu.removeClass('active');
+                $menu.eq(index).addClass('active');
+            });
+        }
+    });
+    
+    /* not change window width */
+    if(winWidth > 2000){
+        //console.log(winWidth);
+        $(document).scroll(function(){
+            var index = Math.round($(this).scrollTop() / 920);
+            $menu.removeClass('active');
+            $menu.eq(index).addClass('active');
+        });
+    }
+    
 })

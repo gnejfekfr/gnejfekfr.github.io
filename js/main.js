@@ -117,6 +117,7 @@ $(document).ready(function(){
     });
 })
 
+
 /* notice slide */
 var noticeCurIdx = 1;
 var noticeMaxIdx = 8;	// 최대 우측 슬라이드시 보여줄 첫번째 인덱스 (리스트 -3)

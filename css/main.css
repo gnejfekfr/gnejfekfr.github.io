@@ -552,7 +552,7 @@ body{
     position: relative;
 }
 .update .update-slide-wrap{
-    width: 100vw;
+    width: 100%;
 }
 .update-slide-wrap .update-slide{
     height: 520px;
