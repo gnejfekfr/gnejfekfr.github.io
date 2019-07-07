@@ -26,8 +26,30 @@ $(document).ready(function(){
         $menu.eq(index).addClass('active');
     });
     
-    /* change window width */
+    
     var winWidth = $(window).width();
+    /* 320 */
+    /* change window width640 */
+    $(window).resize(function(){
+        if(winWidth <= 640){
+            $(document).scroll(function(){
+                var index = Math.round($(this).scrollTop() / 640);
+                $menu.removeClass('active');
+                $menu.eq(index).addClass('active');
+            });
+        }
+    });
+    if(winWidth <= 640){
+        $(document).scroll(function(){
+            var index = Math.round($(this).scrollTop() / 640);
+            $menu.removeClass('active');
+            $menu.eq(index).addClass('active');
+        });
+    }
+    
+    
+    /* 2000 */
+    /* change window width2000 */
     $(window).resize(function(){
         if(winWidth > 2000){
             //console.log(winWidth);
@@ -38,8 +60,6 @@ $(document).ready(function(){
             });
         }
     });
-    
-    /* not change window width */
     if(winWidth > 2000){
         //console.log(winWidth);
         $(document).scroll(function(){
