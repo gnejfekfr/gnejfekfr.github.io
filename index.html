@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Loading the css -->
     <link rel="shortcut icon" href="img/favicon.ico">
-    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/hf-layout.css">
@@ -18,7 +17,7 @@
     
     <title>Slime Rancher</title>
 </head>
-<body>
+<body onResize="window.location=window.location">
     <div class="skip-navi">
         <a href="#section2">Skip to content</a>
     </div>
@@ -26,7 +25,7 @@
     <div class="header clear">
         <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="Monomi Park - Slime Rancher"></a></h1>
         <nav>
-            <ul class="gnb" data-aos="fade-left">
+            <ul class="gnb">
                 <li><a href="#section1"><span>HOME</span></a></li>
                 <li><a href="#section2"><span>BUY ON</span></a></li>
                 <li><a href="#section3"><span>ABOUT</span></a></li>
@@ -43,9 +42,9 @@
         <div class="section1 clear" id="section1">
             <h2 tabindex="0"><img src="img/slimerancher_logo.png" alt="Slime Rancher logo"></h2>
             <div class="character">
-                <span class="gold" data-aos="fade-up" data-aos-duration="1000"><img src="img/gold_slime.png" alt="gold slime img"></span>
-                <span class="blue" data-aos="fade-up-left" data-aos-duration="1000"><img src="img/rock_slime.png" alt="rock slime img"></span>
-                <span class="pink" data-aos="fade-right" data-aos-duration="1000"><img src="img/pink_slime.png" alt="pink slime img"></span>
+                <span class="gold"><img src="img/gold_slime.png" alt="gold slime img"></span>
+                <span class="blue"><img src="img/rock_slime.png" alt="rock slime img"></span>
+                <span class="pink"><img src="img/pink_slime.png" alt="pink slime img"></span>
             </div>
             <div class="mouse-bt">
                 <a href="#">
@@ -565,8 +564,38 @@
         <div class="section5" id="section5">
             <h2 class="mb20" data-aos="fade-up" tabindex="0">NEW UPDATE</h2>
             <div class="update" data-aos="fade-right" data-aos-duration="500">
-                <!-- 영상 슬라이드 -->
+                <!-- PC -->
                 <div class="update-slide-wrap owl-carousel owl-theme">
+                    <div class="update-slide">
+                        <div class="update-video">
+                            <iframe src="https://www.youtube.com/embed/dqeaYawyC-U" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="update-slide">
+                        <div class="update-video">
+                            <iframe src="https://www.youtube.com/embed/W1gLrD84SGA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="update-slide">
+                        <div class="update-video">
+                            <iframe src="https://www.youtube.com/embed/gQWb1JgxVws" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="update-slide">
+                        <div class="update-video">
+                            <iframe src="https://www.youtube.com/embed/O7wGRYVrRPQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="update-slide">
+                        <div class="update-video">
+                            <iframe src="https://www.youtube.com/embed/8mkwp9yYwXU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+<!--
+                 mobile 
+                <div class="mo-update-slide-wrap owl-carousel owl-theme">
                     <div class="update-slide">
                         <div class="update-video">
                             <iframe src="https://www.youtube.com/embed/dqeaYawyC-U" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -597,6 +626,7 @@
                         <span class="update-txt">Ogden's Wild Update Trailer 2017</span>
                     </div>
                 </div>
+-->
             </div>
         </div>
         
@@ -774,7 +804,7 @@
                 <div class="mo-system-box-wrap clear" data-aos="fade-right" data-aos-duration="1000">
                     <div class="system-box">
                         <h3 tabindex="0">WINDOWS</h3>
-                        <div>
+                        <div class="system-list">
                             <dl tabindex="0">
                                 <dt>OS</dt>
                                 <dd>Windows 7+</dd>
@@ -793,7 +823,7 @@
                     </div>
                     <div class="system-box">
                         <h3 tabindex="0">MAC OS X</h3>
-                        <div>
+                        <div class="system-list">
                             <dl tabindex="0">
                                 <dt>OS</dt>
                                 <dd>OSX 10.11+</dd>
@@ -810,7 +840,7 @@
                     </div>
                     <div class="system-box">
                         <h3 tabindex="0">STEAM OS<span>+ LINUX</span></h3>
-                        <div>
+                        <div class="system-list">
                             <dl tabindex="0">
                                 <dt>OS</dt>
                                 <dd>Ubuntu 12.04+ or equivalent</dd>
@@ -857,8 +887,7 @@
     
     <!-- Loading the scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/html5shiv.min.js"></script>
+    <!--<script src="js/jquery-ui.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/gnb.js"></script>

@@ -1,11 +1,5 @@
 $(document).ready(function(){
-    /* gnb click scroll-effect */
-    var gnbLi = $('.gnb > li > a');
-    /*gnbLi.click(function(){
-        var target = $(this).attr('href');
-        $('html, body').stop().animate({scrollTop:$(target).offset().top},500,'swing'); 
-    });*/
-    
+    /* gnb click */
     var $menu, $body, $pages;
     $menu = $('.gnb li');
     $body = $('body, html');
@@ -17,6 +11,7 @@ $(document).ready(function(){
         
         $body.stop().animate({scrollTop : offset}, 500);
     });
+    $menu.eq(0).click();
     
     $(document).trigger('scroll');
     
@@ -28,7 +23,7 @@ $(document).ready(function(){
     
     
     var winWidth = $(window).width();
-    /* 320 */
+    /* 640 */
     /* change window width640 */
     $(window).resize(function(){
         if(winWidth <= 640){
@@ -45,6 +40,26 @@ $(document).ready(function(){
             $menu.removeClass('active');
             $menu.eq(index).addClass('active');
         });
+    }
+    
+    
+    /* 1024 */
+    /* change window width1024 */
+    $(window).resize(function(){
+        if(winWidth >= 1024 && winWidth <= 1366){
+            /* gnb animate */
+            $('.gnb').animate({
+                opacity:1,
+                right:'20px'
+            },400,'swing');
+        }
+    });
+    if(winWidth >= 1024 && winWidth <= 1366){
+        /* gnb animate */
+        $('.gnb').animate({
+            opacity:1,
+            right:'20px'
+        },400,'swing');
     }
     
     

@@ -180,6 +180,9 @@ body{
     width: 1366px;
     height: 768px;
 }
+.buy{
+    text-align: center;
+}
 .buy .buy-box{
     display: inline-block;
     border: 3px solid #bcb76e;
@@ -553,14 +556,14 @@ body{
 .update .update-slide-wrap{
     width: 100%;
 }
-.update-slide-wrap .update-slide{
+.update-slide{
     height: 520px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
-.update-slide-wrap .update-slide iframe{
+.update-slide iframe{
     width: 790px;
     height: 445px;
 }
@@ -767,12 +770,15 @@ body{
     margin: 0 auto;
     overflow: hidden;
 }
+.store-box-wrap{
+    text-align: center;
+}
 .store-box{
+    display: inline-block;
     width: 299px;
     height: 427px;
-    float: left;
     border: 3px solid #bcb76e;
-    margin-right: 22px;
+    margin-right: 33px;
     padding: 30px;
     box-sizing: border-box;
     position: relative;
@@ -809,6 +815,7 @@ body{
 /* section8 (system requirements) */
 .content .section8{
     height: 768px;
+    overflow: hidden;
 }
 .system-box-wrap{
     width: 960px;

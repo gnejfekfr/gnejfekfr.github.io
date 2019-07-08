@@ -52,7 +52,7 @@
     width: 130px;
     right: 30px;
 }
-.gnb a:hover, .gnb a:focus, .gnb li.active a{
+.gnb li.active a{
     background-image: url(../img/gnb_hover_img.png);
     background-size: 100%;
     transform: scale(1.3);

@@ -83,16 +83,44 @@ $(document).ready(function(){
             $('.top-bt').removeClass('move');
         }
         //console.log($('body').height());
-    })
-    /* update trailer slider */
-    /*$('.update-slide-wrap').owlCarousel({
+    });
+    
+    /* update-slider */
+    $('.update-slide-wrap').owlCarousel({
         nav: true,
         center: true,
         dots: true,
         loop: false,
-        margin: 900
-    });*/
+        margin: 480,
+        responsiveClass:true,
+        responsive:{
+            320:{
+                nav:false,
+                margin:150
+            },
+            768:{
+                nav:false,
+                margin: 150
+            },
+            1024:{
+                nav:true,
+                margin:480
+            }
+        }
+    });
+    $('.mo-update-slide-wrap').owlCarousel({
+        nav: false,
+        center: true,
+        dots: true,
+        loop: false,
+        margin: 150
+    });
     
+    
+    /* window resize -> refresh */
+    $(window).resize(function(){
+        document.location.reload();
+    })
     
     /* 640 */
     /* change window width640 */
@@ -103,11 +131,11 @@ $(document).ready(function(){
             $('.section1 > h2 img').attr({'src':'img/slimerancher_logo_mo.png'});
             
             /* section1 slime animate */
-            setInterval(function() {
+            /*setInterval(function() {
                 $('.pink').animate({
-                    'bottom': '-80px'
+                    'bottom': '-60px'
                 }, 500).animate({
-                    'bottom': '-89px'
+                    'bottom': '-69px'
                 }, 500);
 
                 $('.blue').animate({
@@ -121,24 +149,15 @@ $(document).ready(function(){
                 }, 600).animate({
                     'bottom': '160px'
                 }, 600);
-            }, 0);
-            
-            /* update-slider */
-            $('.update-slide-wrap').owlCarousel({
-                nav: false,
-                center: true,
-                dots: true,
-                loop: false,
-                margin: 150
-            });
+            }, 0);*/
             
             /* system requirements tab */
-            var tabA = $('.mo-system-box-wrap > div > h3');
-            tabA.click(function(){
+            var systemTab = $('.mo-system-box-wrap > div > h3');
+            systemTab.click(function(){
                 $('.system-box > div').hide();
                 $(this).next('div').show();
             });
-            tabA.eq(0).click();
+            systemTab.eq(0).click();
             
             /* top-bt */
             $(window).scroll(function(){
@@ -149,7 +168,7 @@ $(document).ready(function(){
                     $('.top-bt').removeClass('move');
                 }
                 //console.log($('body').height());
-            })
+            });
         }
     });
     if(winWidth <= 640){
@@ -157,11 +176,11 @@ $(document).ready(function(){
         $('.section1 > h2 img').attr({'src':'img/slimerancher_logo_mo.png'});
         
         /* section1 slime animate */
-        setInterval(function() {
+        /*setInterval(function() {
             $('.pink').animate({
-                'bottom': '-70px'
+                'bottom': '-60px'
             }, 500).animate({
-                'bottom': '-79px'
+                'bottom': '-69px'
             }, 500);
 
             $('.blue').animate({
@@ -175,16 +194,7 @@ $(document).ready(function(){
             }, 600).animate({
                 'bottom': '160px'
             }, 600);
-        }, 0);
-        
-        /* update-slider */
-        $('.update-slide-wrap').owlCarousel({
-            nav: false,
-            center: true,
-            dots: true,
-            loop: false,
-            margin: 150
-        });
+        }, 0);*/
         
         /* system requirements tab */
         var systemTab = $('.mo-system-box-wrap > div > h3');
@@ -203,16 +213,19 @@ $(document).ready(function(){
                 $('.top-bt').removeClass('move');
             }
             //console.log($('body').height());
-        })
+        });
     }
     
     
-    /* 1200 */
-    /* change window width1200 */
+    /* 1000 */
+    /* change window width1000 */
     $(window).resize(function(){
-        if(winWidth >= 1200){
+        if(winWidth >= 1000){
+            /* slimerancher_logo img h2 */
+            $('.section1 > h2 img').attr({'src':'img/slimerancher_logo.png'});
+            
             /* section1 slime animate */
-            setInterval(function() {
+            /*setInterval(function() {
                 $('.pink').animate({
                     'bottom': '-160px'
                 }, 500).animate({
@@ -230,12 +243,15 @@ $(document).ready(function(){
                 }, 500).animate({
                     'bottom': '160px'
                 }, 500);
-            }, 0);
+            }, 0);*/
         }
     });
-    if(winWidth >= 1200){
+    if(winWidth >= 1000){
+        /* slimerancher_logo img h2 */
+        $('.section1 > h2 img').attr({'src':'img/slimerancher_logo.png'});
+        
         /* section1 slime animate */
-        setInterval(function() {
+        /*setInterval(function() {
             $('.pink').animate({
                 'bottom': '-160px'
             }, 500).animate({
@@ -253,7 +269,7 @@ $(document).ready(function(){
             }, 500).animate({
                 'bottom': '160px'
             }, 500);
-        }, 0);
+        }, 0);*/
     }
 });
 
