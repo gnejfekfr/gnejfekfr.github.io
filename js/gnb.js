@@ -46,7 +46,7 @@ $(document).ready(function(){
     /* 1024 */
     /* change window width1024 */
     $(window).resize(function(){
-        if(winWidth >= 1024 && winWidth <= 1366){
+        if(winWidth >= 1200 && winWidth <= 1500){
             /* gnb animate */
             $('.gnb').animate({
                 opacity:1,
@@ -54,7 +54,7 @@ $(document).ready(function(){
             },400,'swing');
         }
     });
-    if(winWidth >= 1024 && winWidth <= 1366){
+    if(winWidth >= 1200 && winWidth <= 1500){
         /* gnb animate */
         $('.gnb').animate({
             opacity:1,
@@ -66,19 +66,19 @@ $(document).ready(function(){
     /* 2000 */
     /* change window width2000 */
     $(window).resize(function(){
-        if(winWidth > 2000){
+        if(winWidth >= 2000){
             //console.log(winWidth);
             $(document).scroll(function(){
-                var index = Math.round($(this).scrollTop() / 920);
+                var index = Math.round($(this).scrollTop() / 850);
                 $menu.removeClass('active');
                 $menu.eq(index).addClass('active');
             });
         }
     });
-    if(winWidth > 2000){
+    if(winWidth >= 2000){
         //console.log(winWidth);
         $(document).scroll(function(){
-            var index = Math.round($(this).scrollTop() / 920);
+            var index = Math.round($(this).scrollTop() / 850);
             $menu.removeClass('active');
             $menu.eq(index).addClass('active');
         });

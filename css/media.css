@@ -799,8 +799,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1366px){
     /* gnb */
     .gnb{
-        opacity: 0;
-        right: -100px;
+        display: none;
     }
     
     /* section1 */
@@ -921,6 +920,10 @@
         margin-right: 1%;
         background-size: 98% 99%;
     }
+    .store-box a img{
+        margin: 0 auto;
+        width: 235px;
+    }
     
     /* section8 */
     .content .section8 > h2{
@@ -961,14 +964,83 @@
 }
 
 
-/* pc */
-
-
-
-
-
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+    .content .section1{
+        background-position: 30% 100%
+    }
     
+    /* gnb */
+    .gnb{
+        opacity: 0;
+        right: -100px;
+        display: block;
+    }
+    
+    /* update slide */
+    .owl-theme .owl-nav button.owl-prev{
+        left: 80px;
+    }
+    .owl-theme .owl-nav button.owl-next{
+        right: 80px;
+    }
+    
+    /* store */
+    .store-box{
+        width: 23.77%;
+        height: 400px;
+        padding: 20px;
+        margin-right: 1%;
+        background-size: 98% 99%;
+    }
+    .store-box a img{
+        margin: 0 auto;
+        width: 235px;
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1309px){
+    /* update slide */
+    .owl-theme .owl-nav button.owl-prev{
+        left: 140px;
+    }
+    .owl-theme .owl-nav button.owl-next{
+        right: 140px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1500px){
+    /* gnb */
+    .gnb{
+        opacity: 0;
+        right: -100px;
+        display: block;
+    }
+    
+    /* update slide */
+    .owl-theme .owl-nav button.owl-prev{
+        left: 200px;
+    }
+    .owl-theme .owl-nav button.owl-next{
+        right: 200px;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1899px){
+    /* update slide */
+    .owl-theme .owl-nav button.owl-prev{
+        left: 20%;
+        margin-left: -25px;
+    }
+    .owl-theme .owl-nav button.owl-next{
+        right: 20%;
+        margin-right: -25px;
+    }
+}
+
+
+
+/* pc */
+@media screen and (min-width: 2000px){
     /* section1 */
     .content > div{
         height: 1440px;
