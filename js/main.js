@@ -279,7 +279,7 @@ var noticeMaxIdx = 8;	// 최대 우측 슬라이드시 보여줄 첫번째 인�
 function goNoticeLeft() {
     //console.log('left : ' + $('#test').css("margin-left"));
     if(noticeCurIdx == 1) {
-        $("#notice_slide").stop().animate({"margin-left":"+=80px"},100).animate({"margin-left":"0px"},300, 'easeOutBounce');	
+        $("#notice_slide").stop().animate({"margin-left":"+=80px"},100).animate({"margin-left":"0px"},300);	
     }
     else {
         var divWidth = 262+19;	
@@ -293,7 +293,7 @@ function goNoticeRight() {
     //console.log('right : ' + $('#test').css("margin-left"));	
     if(noticeCurIdx == noticeMaxIdx) {
         var maxWidth = (262+19)*(noticeMaxIdx-1);
-        $("#notice_slide").stop().animate({"margin-left":"-=80px"},100).animate({"margin-left":"-"+maxWidth+"px"},300, 'easeOutBounce');
+        $("#notice_slide").stop().animate({"margin-left":"-=80px"},100).animate({"margin-left":"-"+maxWidth+"px"},300);
     }
     else {
         var divWidth = 262+19;
